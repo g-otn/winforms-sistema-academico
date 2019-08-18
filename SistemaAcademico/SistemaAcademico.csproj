@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ACEAA480-4DD1-4A8B-86C3-0B9331856E76}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SistemaAcademico</RootNamespace>
+    <AssemblyName>SistemaAcademico</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Security">
+      <HintPath>..\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=4.0.9.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.4.0.9\lib\net451\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Curso.cs" />
+    <Compile Include="forms\Admin\FormCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Admin\FormCadastro.Designer.cs">
+      <DependentUpon>FormCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Admin\FormMaterias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Admin\FormMaterias.Designer.cs">
+      <DependentUpon>FormMaterias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Admin\FormNotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Admin\FormNotas.Designer.cs">
+      <DependentUpon>FormNotas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Admin\FormVisaoGeral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Admin\FormVisaoGeral.Designer.cs">
+      <DependentUpon>FormVisaoGeral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Admin\FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Admin\FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Admin\FormUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Admin\FormUsuarios.Designer.cs">
+      <DependentUpon>FormUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Aluno\FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Aluno\FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Aluno\FormMinhasNotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Aluno\FormMinhasNotas.Designer.cs">
+      <DependentUpon>FormMinhasNotas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Professor\FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Professor\FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Professor\FormNotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Professor\FormNotas.Designer.cs">
+      <DependentUpon>FormNotas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materia.cs" />
+    <Compile Include="Nota.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usuario.cs" />
+    <Compile Include="usuarios\Admin.cs" />
+    <Compile Include="usuarios\Aluno.cs" />
+    <Compile Include="usuarios\Professor.cs" />
+    <Compile Include="util\ExecutarDB.cs" />
+    <Compile Include="util\ConectaDB.cs" />
+    <EmbeddedResource Include="forms\Admin\FormCadastro.resx">
+      <DependentUpon>FormCadastro.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Admin\FormMaterias.resx">
+      <DependentUpon>FormMaterias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Admin\FormNotas.resx">
+      <DependentUpon>FormNotas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Admin\FormVisaoGeral.resx">
+      <DependentUpon>FormVisaoGeral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Admin\FormUsuarios.resx">
+      <DependentUpon>FormUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Aluno\FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Aluno\FormMinhasNotas.resx">
+      <DependentUpon>FormMinhasNotas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Admin\FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Professor\FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Professor\FormNotas.resx">
+      <DependentUpon>FormNotas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\icone-default.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
